@@ -24,6 +24,9 @@ class Result : Fragment() {
         return inflater.inflate(R.layout.fragment_result, container, false)
     }
 
+    //eqw
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
