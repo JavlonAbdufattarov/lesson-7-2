@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_welcome" >
         <action
             android:id="@+id/action_welcomeFragment_to_quizFragment"
-            app:destination="@id/quizFragment" />
+            app:destination="@id/quizFragment"
+            app:enterAnim="@anim/anim1"
+            app:exitAnim="@anim/anim2"
+            app:popEnterAnim="@anim/anim3"
+            app:popExitAnim="@anim/anim4"/>
     </fragment>
     <fragment
         android:id="@+id/result"
@@ -27,10 +31,18 @@
         <action
             android:id="@+id/action_result_to_quizFragment"
             app:destination="@id/quizFragment"
-            app:popUpTo="@id/welcomeFragment" />
+            app:popUpTo="@id/welcomeFragment"
+            app:enterAnim="@anim/anim1"
+            app:exitAnim="@anim/anim2"
+            app:popEnterAnim="@anim/anim3"
+            app:popExitAnim="@anim/anim4"/>
         <action
             android:id="@+id/action_result_to_welcomeFragment"
-            app:destination="@id/welcomeFragment" />
+            app:destination="@id/welcomeFragment"
+            app:enterAnim="@anim/anim1"
+            app:exitAnim="@anim/anim2"
+            app:popEnterAnim="@anim/anim3"
+            app:popExitAnim="@anim/anim4"/>
     </fragment>
     <fragment
         android:id="@+id/quizFragment"
@@ -40,9 +52,17 @@
         <action
             android:id="@+id/action_quizFragment_to_result"
             app:destination="@id/result"
-            app:popUpTo="@id/welcomeFragment" />
+            app:popUpTo="@id/welcomeFragment"
+            app:enterAnim="@anim/anim1"
+            app:exitAnim="@anim/anim2"
+            app:popEnterAnim="@anim/anim3"
+            app:popExitAnim="@anim/anim4"/>
         <action
             android:id="@+id/action_quizFragment_to_welcomeFragment"
-            app:destination="@id/welcomeFragment" />
+            app:destination="@id/welcomeFragment"
+            app:enterAnim="@anim/anim1"
+            app:exitAnim="@anim/anim2"
+            app:popEnterAnim="@anim/anim3"
+            app:popExitAnim="@anim/anim4"/>
     </fragment>
 </navigation>

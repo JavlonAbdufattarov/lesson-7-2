@@ -1,5 +1,6 @@
 package com.example.quiz
 
+import android.animation.ObjectAnimator
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +9,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.navOptions
 
 
 class Result : Fragment() {
@@ -30,15 +33,33 @@ class Result : Fragment() {
 
         val totalQuestions =  ResultArgs.fromBundle(requireArguments()).max
         val correctAnswers = ResultArgs.fromBundle(requireArguments()).answer
+        tvScore.animate().apply {
+            // Создать ObjectAnimator для изменения альфа-канала
+            val fadeIn = ObjectAnimator.ofFloat(tvScore, "alpha", 0.0f, 1.0f)
 
+            // Задать продолжительность анимации
+            fadeIn.setDuration(1000)
+
+            // Запустить анимацию
+            fadeIn.start()
+        }
         tvScore.text = "Your Score is $correctAnswers out of $totalQuestions."
+
 
         btnAgain.setOnClickListener {
             // Запуск QuizFragment снова
-            activity?.let {
-                findNavController().navigate(R.id.action_result_to_quizFragment)
-
-            }
+            view.findNavController().navigate(
+                R.id.action_result_to_quizFragment,
+                null,
+                navOptions {
+                    anim {
+                        enter = R.anim.anim1
+                        exit = R.anim.anim2
+                        popEnter = R.anim.anim3
+                        popExit = R.anim.anim4
+                    }
+                }
+            )
         }
         btnFinish.setOnClickListener {
             // Возвращение на главный экран

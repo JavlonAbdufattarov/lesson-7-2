@@ -95,6 +95,7 @@
             tools:text="Android Inc." />
 
         <TextView
+
             android:id="@+id/tv_option_four"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -110,21 +111,26 @@
             tools:text="Nokia" />
 
         <Button
+
+            android:focusable="true"
+            android:clickable="true"
             android:id="@+id/btn_back"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/custom_ripple_efect"
             android:text="BACK"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
         <Button
+            android:focusable="true"
+            android:clickable="true"
+            android:background="@drawable/custom_ripple_efect"
             android:id="@+id/btn_submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="@color/colorPrimary"
             android:text="SUBMIT"
             android:textColor="@android:color/white"
             android:textSize="18sp"

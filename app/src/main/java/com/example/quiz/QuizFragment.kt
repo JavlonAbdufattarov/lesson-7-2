@@ -1,5 +1,6 @@
 package com.example.quiz
 
+import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
 import android.graphics.Color
 import android.graphics.Typeface
@@ -8,6 +9,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -90,6 +92,7 @@ class QuizFragment : Fragment(),View.OnClickListener {
             R.id.tv_option_four -> selectedOptionView(tvOptionFour, 4)
             R.id.btn_submit -> handleSubmit()
         }
+
     }
 
     @SuppressLint("SuspiciousIndentation")
@@ -124,6 +127,17 @@ class QuizFragment : Fragment(),View.OnClickListener {
     private fun setQuestion() {
         val question = mQuestionsList!!.get(mCurrentPosition - 1)
         defaultOptionsView()
+
+        btnSubmit.animate().apply {
+            // Создать ObjectAnimator для изменения альфа-канала
+            val fadeIn = ObjectAnimator.ofFloat(btnSubmit, "alpha", 0.0f, 1.0f)
+
+         // Задать продолжительность анимации
+            fadeIn.setDuration(1000)
+
+            // Запустить анимацию
+            fadeIn.start()
+        }
 
         if (mCurrentPosition == mQuestionsList!!.size) {
             btnSubmit.text = "FINISH"

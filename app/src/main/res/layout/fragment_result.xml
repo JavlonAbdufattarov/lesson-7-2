@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/ic_bg"
     android:orientation="vertical"
     android:gravity="center_horizontal"
@@ -19,12 +20,13 @@
         android:textSize="25sp"
         android:textStyle="bold" />
 
-    <ImageView
-        android:id="@+id/iv_trophy"
+    <com.airbnb.lottie.LottieAnimationView
         android:layout_width="wrap_content"
-        android:layout_height="331dp"
-        android:contentDescription="image"
-        android:src="@drawable/ic_trophy" />
+        android:layout_height="284dp"
+        app:lottie_rawRes="@raw/anim"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        />
 
     <TextView
         android:id="@+id/tv_congratulations"
@@ -51,7 +53,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="@android:color/white"
+        android:focusable="true"
+        android:clickable="true"
+        android:background="@drawable/custom_ripple_efect"
         android:text="Start again"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -61,7 +65,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="@android:color/white"
+        android:focusable="true"
+        android:clickable="true"
+        android:background="@drawable/custom_ripple_efect"
         android:text="FINISH"
         android:textSize="18sp"
         android:textStyle="bold" />
