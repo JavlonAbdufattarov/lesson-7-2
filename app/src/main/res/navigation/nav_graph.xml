@@ -10,9 +10,10 @@
         android:name="com.example.quiz.WelcomeFragment"
         android:label="fragment_welcome"
         tools:layout="@layout/fragment_welcome" >
+
         <action
-            android:id="@+id/action_welcomeFragment_to_quizFragment"
-            app:destination="@id/quizFragment"
+            android:id="@+id/action_welcomeFragment_to_registration"
+            app:destination="@id/registration"
             app:enterAnim="@anim/anim1"
             app:exitAnim="@anim/anim2"
             app:popEnterAnim="@anim/anim3"
@@ -28,6 +29,10 @@
             app:argType="string" />
         <argument android:name="max"
             app:argType="integer" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            />
         <action
             android:id="@+id/action_result_to_quizFragment"
             app:destination="@id/quizFragment"
@@ -43,12 +48,19 @@
             app:exitAnim="@anim/anim2"
             app:popEnterAnim="@anim/anim3"
             app:popExitAnim="@anim/anim4"/>
+        <action
+            android:id="@+id/action_result_to_registration"
+            app:destination="@id/registration" />
+
     </fragment>
     <fragment
         android:id="@+id/quizFragment"
         android:name="com.example.quiz.QuizFragment"
         android:label="fragment_quiz"
         tools:layout="@layout/fragment_quiz" >
+        <argument
+            android:name="name"
+            app:argType="string" />
         <action
             android:id="@+id/action_quizFragment_to_result"
             app:destination="@id/result"
@@ -64,5 +76,18 @@
             app:exitAnim="@anim/anim2"
             app:popEnterAnim="@anim/anim3"
             app:popExitAnim="@anim/anim4"/>
+    </fragment>
+    <fragment
+        android:id="@+id/registration"
+        android:name="com.example.quiz.Registration"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registration_to_quizFragment"
+            app:destination="@id/quizFragment" />
+        <action
+            android:id="@+id/action_registration_to_result2"
+            app:destination="@id/result" />
+
     </fragment>
 </navigation>

@@ -18,7 +18,7 @@ class WelcomeFragment : Fragment() {
         val startButton = view.findViewById<Button>(R.id.button)
         startButton.setOnClickListener {
             view.findNavController().navigate(
-                R.id.action_welcomeFragment_to_quizFragment,
+                R.id.action_welcomeFragment_to_registration,
                 null,
                 navOptions {
                     anim {

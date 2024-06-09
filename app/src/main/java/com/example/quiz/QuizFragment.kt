@@ -16,6 +16,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.quiz.QuizFragmentDirections
 
 // TODO: Rename parameter arguments, choose names that match
@@ -46,6 +47,7 @@ class QuizFragment : Fragment(),View.OnClickListener {
     private lateinit var tvProgress: TextView
     private lateinit var tvQuestion: TextView
     private lateinit var btn_back:Button
+    private lateinit var name: String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -102,7 +104,9 @@ class QuizFragment : Fragment(),View.OnClickListener {
             if (mCurrentPosition <= mQuestionsList!!.size) {
                 setQuestion()
             } else {
-                val action = QuizFragmentDirections.actionQuizFragmentToResult(mCorrectAnswers.toString(), mQuestionsList!!.size)
+                val args: QuizFragmentArgs by navArgs()
+                name = args.name
+                val action = QuizFragmentDirections.actionQuizFragmentToResult(mCorrectAnswers.toString(), mQuestionsList!!.size,name.toString())
                     findNavController().navigate(action)
             }
         } else {

@@ -33,9 +33,11 @@ class Result : Fragment() {
         val tvScore = view.findViewById<TextView>(R.id.tv_score)
         val btnFinish = view.findViewById<Button>(R.id.btn_finish)
         val btnAgain = view.findViewById<Button>(R.id.btn_again)
+        val tv_name = view.findViewById<TextView>(R.id.tv_name)
 
         val totalQuestions =  ResultArgs.fromBundle(requireArguments()).max
         val correctAnswers = ResultArgs.fromBundle(requireArguments()).answer
+        val name = ResultArgs.fromBundle(requireArguments()).name
         tvScore.animate().apply {
             // Создать ObjectAnimator для изменения альфа-канала
             val fadeIn = ObjectAnimator.ofFloat(tvScore, "alpha", 0.0f, 1.0f)
@@ -47,6 +49,8 @@ class Result : Fragment() {
             fadeIn.start()
         }
         tvScore.text = "Your Score is $correctAnswers out of $totalQuestions."
+        tv_name.text = "$name"
+
 
 
         btnAgain.setOnClickListener {
