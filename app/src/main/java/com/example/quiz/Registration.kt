@@ -11,6 +11,10 @@ import android.widget.EditText
 import androidx.navigation.fragment.findNavController
 import com.example.quiz.R.id
 import com.google.android.material.datepicker.MaterialDatePicker
+import com.google.android.material.snackbar.Snackbar
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -46,8 +50,18 @@ class Registration : Fragment() {
         val btn_Save =view.findViewById<Button>(R.id.btn_save)
          val  edittext1 = view.findViewById<EditText>(R.id.editText);
 
+
         btn_Date.setOnClickListener {
             val datePicker = MaterialDatePicker.Builder.datePicker().build()
+            datePicker.addOnPositiveButtonClickListener { selection ->
+                // Преобразование даты в человекоориентированный вид
+                val simpleDateFormat = SimpleDateFormat("dd.MM.yy", Locale.getDefault())
+                val date = Date(selection)
+                val formattedDate = simpleDateFormat.format(date)
+
+                // Показ отформатированной даты в Snackbar
+                Snackbar.make(view, "Выбранная дата: $formattedDate", Snackbar.LENGTH_LONG).show()
+            }
             datePicker.show(parentFragmentManager, "DATE_PICKER")
         }
         btn_Save.setOnClickListener {

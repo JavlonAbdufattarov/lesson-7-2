@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quiz</string>
+    <string name="welcome_message">"Добро пожаловать, уважаемые участники и гости! Сегодня у нас особенный вечер, полный увлекательных вопросов и занимательных задач. Мы рады видеть вас на нашей викторине, где каждый из вас сможет проявить свои знания и эрудицию. Пусть этот вечер принесет вам не только новые знания, но и массу положительных эмоций. Готовьтесь, впереди вас ждут испытания, но помните — главное не победа, а участие. Желаем удачи каждому участнику и пусть сильнейший выиграет!"</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="start_quiz">Перейти к векторине</string>
+    <string name="write_your_name_and_indicate_your_birthday">Напишите свое имя и укажите свой день рождения</string>
+    <string name="name">Имя</string>
+    <string name="select_a_date">Выберите дату</string>
+    <string name="save">Сохранить</string>
+    <string name="result">Результат</string>
+    <string name="hey_congratulations">Эй,Поздравляем!</string>
+    <string name="finish">Закончить</string>
+    <string name="start_again">Начать заново</string>
+    <string name="change_language">Изменить язык</string>
+</resources>

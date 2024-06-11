@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Write your name and indicate your birthday"
+        android:text="@string/write_your_name_and_indicate_your_birthday"
         android:textColor="@android:color/white"
         android:textSize="25sp"
         android:textStyle="bold"/>
@@ -32,7 +32,7 @@
         android:layout_marginTop="10dp"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:hint="Name"/>
+        android:hint="@string/name"/>
 
 
     <Button
@@ -43,7 +43,7 @@
         android:focusable="true"
         android:clickable="true"
         android:background="@drawable/custom_ripple_efect"
-        android:text="Select a Date "
+        android:text="@string/select_a_date"
         android:textSize="18sp"
         android:textStyle="bold"
         />
@@ -55,7 +55,7 @@
         android:focusable="true"
         android:clickable="true"
         android:background="@drawable/custom_ripple_efect"
-        android:text="SAVE"
+        android:text="@string/save"
         android:textSize="18sp"
         android:textStyle="bold" />
 </LinearLayout>

@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:text="Result"
+        android:text="@string/result"
         android:textColor="@android:color/white"
         android:textSize="25sp"
         android:textStyle="bold" />
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Hey, Congratulations!"
+        android:text="@string/hey_congratulations"
         android:textColor="@android:color/white"
         android:textSize="25sp"
         android:textStyle="bold"/>
@@ -42,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Name"
+        android:text=""
         android:textColor="@android:color/white"
         android:textSize="25sp"
         android:textStyle="bold"/>
@@ -65,7 +65,7 @@
         android:focusable="true"
         android:clickable="true"
         android:background="@drawable/custom_ripple_efect"
-        android:text="Start again"
+        android:text="@string/start_again"
         android:textSize="18sp"
         android:textStyle="bold"
         />
@@ -77,7 +77,7 @@
         android:focusable="true"
         android:clickable="true"
         android:background="@drawable/custom_ripple_efect"
-        android:text="FINISH"
+        android:text="@string/finish"
         android:textSize="18sp"
         android:textStyle="bold" />
 </LinearLayout>
